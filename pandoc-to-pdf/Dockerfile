@@ -4,7 +4,7 @@ ENV TZ=Europe/London
 
 RUN apt update
 RUN ln -snf /usr/share/zoneinfo/$TZ /etc/localtime && echo $TZ > /etc/timezone
-RUN apt install -y gem python-pip
+RUN apt install -y rubygems-integration python-pip
 RUN pip install python-gitlab flake8
 RUN gem install mdl
 RUN wget https://github.com/wkhtmltopdf/wkhtmltopdf/releases/download/0.12.5/wkhtmltox_0.12.5-1.bionic_amd64.deb \
