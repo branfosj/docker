@@ -3,7 +3,8 @@ FROM ubuntu:18.04
 #RUN yum install -y epel-release
 #RUN yum install -y python2-pip git wget
 #RUN yum install -y centos-release-scl-rh centos-release-scl
-RUN sed -i 's/main/main universe multiverse/g' /etc/apt/sources.list
+#RUN sed -i 's/main/main universe multiverse/g' /etc/apt/sources.list
+RUN apt update
 RUN apt install -y gem python-pip
 RUN pip install python-gitlab flake8
 #RUN wget https://downloads.wkhtmltopdf.org/0.12/0.12.5/wkhtmltox-0.12.5-1.centos7.x86_64.rpm
